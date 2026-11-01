@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+  }
+
+  h1, h2, h3, h4, h5, .font-game {
+    font-family: 'Baloo 2', cursive, 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* 3D Candy Button Press Effects (Duolingo/Nintendo style) */
+.btn-candy-amber {
+  background: linear-gradient(180deg, #fcd34d 0%, #f59e0b 100%);
+  box-shadow: 0 5px 0 #b45309, 0 10px 18px rgba(245, 158, 11, 0.35);
+  transition: all 0.1s ease;
+}
+.btn-candy-amber:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #b45309, 0 3px 6px rgba(245, 158, 11, 0.2);
+}
+
+.btn-candy-green {
+  background: linear-gradient(180deg, #34d399 0%, #059669 100%);
+  box-shadow: 0 5px 0 #047857, 0 10px 18px rgba(16, 185, 129, 0.35);
+  transition: all 0.1s ease;
+}
+.btn-candy-green:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #047857, 0 3px 6px rgba(16, 185, 129, 0.2);
+}
+
+.btn-candy-blue {
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+  box-shadow: 0 5px 0 #0369a1, 0 10px 18px rgba(2, 132, 199, 0.35);
+  transition: all 0.1s ease;
+}
+.btn-candy-blue:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #0369a1, 0 3px 6px rgba(2, 132, 199, 0.2);
+}
+
+.btn-candy-pink {
+  background: linear-gradient(180deg, #f472b6 0%, #db2777 100%);
+  box-shadow: 0 5px 0 #9d174d, 0 10px 18px rgba(219, 39, 119, 0.35);
+  transition: all 0.1s ease;
+}
+.btn-candy-pink:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #9d174d, 0 3px 6px rgba(219, 39, 119, 0.2);
+}
+
+.btn-candy-purple {
+  background: linear-gradient(180deg, #c084fc 0%, #9333ea 100%);
+  box-shadow: 0 5px 0 #6b21a8, 0 10px 18px rgba(147, 51, 234, 0.35);
+  transition: all 0.1s ease;
+}
+.btn-candy-purple:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #6b21a8, 0 3px 6px rgba(147, 51, 234, 0.2);
+}
+
+/* Animations */
+@keyframes cute-bounce {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-10px) scale(1.02); }
+}
+
+@keyframes cute-wobble {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@keyframes cute-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+@keyframes rainbow-shift {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+@keyframes cloud-drift {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(15px); }
+  100% { transform: translateX(0); }
+}
+
+.animate-cute-bounce {
+  animation: cute-bounce 2.6s ease-in-out infinite;
+}
+
+.animate-cute-wobble {
+  animation: cute-wobble 2s ease-in-out infinite;
+}
+
+.animate-cute-pulse {
+  animation: cute-pulse 2s ease-in-out infinite;
+}
+
+.animate-cloud-drift {
+  animation: cloud-drift 6s ease-in-out infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f59e0b 0%, #ec4899 100%);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #fbbf24 0%, #f472b6 100%);
+}

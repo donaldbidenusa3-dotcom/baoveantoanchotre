@@ -1,0 +1,8 @@
+{
+  "name": "Safe Adventure - Hành Trình Bảo Vệ Bản Thân",
+  "description": "Game giáo dục 2D tương tác dành cho trẻ em về giáo dục giới tính, ranh giới cơ thể, phòng chống xâm hại, bạo lực và an toàn trên Internet.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
